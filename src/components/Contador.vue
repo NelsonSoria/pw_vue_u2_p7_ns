@@ -1,9 +1,9 @@
 
 <template>
-  <h2>{{ encabezado }} : {{valor2}}</h2>
+  <h2>{{ encabezado }} : {{ valor2 }}</h2>
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputed }}</p>
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputed }}</p>
-<!--   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputed }}</p>
+  <!--   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputed }}</p>
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputed }}</p>
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputed }}</p> -->
 
@@ -44,34 +44,35 @@ export default {
   },
   //Primera forma de declaracion de un props
   //props:['encabezado','valor']
-  props:{
-    encabezado:{
-      type:String,
-      validator(value){
-        return value.includes('a');
-      }
+  props: {
+    encabezado: {
+      type: String,
+      validator(value) {
+        return value.includes("a");
+      },
     },
-    valor:Number,
-    valor2:{
-      type:Number,
-      required:false,
-      default:77,
-      validator(value){
+    valor: Number,
+    valor2: {
+      type: Number,
+      required: false,
+      default: 77,
+      validator(value) {
         //programo mi validacion bajo mi criterio y retorno tru
         // cuando es valido para mi
         // y retorno false cuando no es valido para mi
-        return value<=77;
-
-      }
+        return value <= 77;
+      },
     },
-    esVerdad:{
-      type:Boolean,
-      required:true
+    esVerdad: {
+      type: Boolean,
+      required: true,
     },
-    arreglo:Array,
-    fecha:Date,
-    objetoPersona:Object,
-  }
+    arreglo: {
+      type: Array,
+    },
+    fecha: Date,
+    objetoPersona: Object,
+  },
 };
 </script>
 
@@ -81,11 +82,11 @@ button {
   border-radius: 5px;
   margin: 0px 10px;
   border: 1px solid white;
-  color:white;
+  color: white;
   cursor: pointer;
   padding: 5px 20px;
 }
 button:hover {
- background: #5aa67b;
+  background: #5aa67b;
 }
 </style>
